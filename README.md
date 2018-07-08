@@ -7,9 +7,9 @@
 https://blog.julienkermarec.com/ionic-3-infinite-swiped-tabs/
 
 ## Features
-Infinite Tabs / Segments__
-Auto-centering active segment with animation__
-iOS / Android UX compatible__
+Infinite Tabs / Segments<br />
+Auto-centering active segment with animation<br />
+iOS / Android UX compatible<br />
 
 ## Usage
 ```html
