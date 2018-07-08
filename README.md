@@ -1,4 +1,4 @@
-# react-native-bar-chart
+# ionic-3-infinite-swiped-tabs
 
 ![Screenshot](https://raw.githubusercontent.com/julienkermarec/ionic-infinite-swiped-tabs/master/screenshots/header.png)
 
@@ -7,9 +7,9 @@
 https://blog.julienkermarec.com/ionic-3-infinite-swiped-tabs/
 
 ## Features
-Infinite Tabs / Segments
-Auto-centering active segment with animation
-iOS / Android UX compatible
+Infinite Tabs / Segments__
+Auto-centering active segment with animation__
+iOS / Android UX compatible__
 
 ## Usage
 ```html
