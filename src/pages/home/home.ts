@@ -69,7 +69,7 @@ export class HomePage {
 
     let timer = setInterval(() => {
       var time = new Date().getTime() - startTime;
-      var newX = this.easeInOutQuart(time, startX, distanceX, duration),
+      var newX = this.easeInOutQuart(time, startX, distanceX, duration);
       if (time >= duration) {
         clearInterval(timer);
       }
