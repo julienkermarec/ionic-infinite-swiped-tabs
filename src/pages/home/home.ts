@@ -37,6 +37,10 @@ export class HomePage {
     if(!this.segments || !this.segments.nativeElement)
       return;
 
+    let slides_count = this.segments.nativeElement.childElementCount;
+    if(this.page >= slides_count)
+      this.page = slides_count-1;
+
     let sizeLeft = this.sizeLeft();
     let sizeCurrent = this.segments.nativeElement.children[this.page].clientWidth;
     let result = sizeLeft - (window.innerWidth / 2) + (sizeCurrent/2) ;
