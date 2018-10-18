@@ -28,7 +28,12 @@ export class HomePage {
   // On slide changed
   slideChanged() {
     let currentIndex = this.slider.getActiveIndex();
+    let slides_count = this.segments.nativeElement.childElementCount;
+
     this.page = currentIndex.toString();
+    if(this.page >= slides_count)
+      this.page = slides_count-1;
+
     this.centerScroll();
   }
 
@@ -36,10 +41,6 @@ export class HomePage {
   centerScroll(){
     if(!this.segments || !this.segments.nativeElement)
       return;
-
-    let slides_count = this.segments.nativeElement.childElementCount;
-    if(this.page >= slides_count)
-      this.page = slides_count-1;
 
     let sizeLeft = this.sizeLeft();
     let sizeCurrent = this.segments.nativeElement.children[this.page].clientWidth;
