@@ -22,6 +22,7 @@ export class HomePage {
   // On segment click
   selectedTab(index) {
     this.slider.slideTo(index);
+    console.log("selectedTab",index);
   }
 
 
@@ -30,9 +31,11 @@ export class HomePage {
     let currentIndex = this.slider.getActiveIndex();
     let slides_count = this.segments.nativeElement.childElementCount;
 
-    this.page = currentIndex.toString();
-    if(this.page >= slides_count)
-      this.page = slides_count-1;
+    let nextPage = currentIndex.toString();
+    if(nextPage >= slides_count)
+      nextPage = slides_count-1;
+    if(nextPage != this.page)
+      this.page = nextPage;
 
     this.centerScroll();
   }
