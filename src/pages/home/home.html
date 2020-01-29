@@ -1,31 +1,36 @@
-<ion-header mode="md" >
-  <ion-navbar>
-    <ion-title>Infinite Swiped Tabs</ion-title>
-  </ion-navbar>
-  <ion-toolbar mode="md" color="light">
-    <ion-segment  #segments  mode="md" [(ngModel)]="page" color="light">
-        <ion-segment-button value="0"  (click)="selectedTab(0)">
-            Segment 1
-        </ion-segment-button>
-        <ion-segment-button value="1"  (click)="selectedTab(1)">
-            Segment 2
-        </ion-segment-button>
-        <ion-segment-button value="2"  (click)="selectedTab(2)">
-            Segment 3
-        </ion-segment-button>
-        <ion-segment-button value="3"  (click)="selectedTab(3)">
-            Segment 4
-        </ion-segment-button>
-        <ion-segment-button value="4"  (click)="selectedTab(4)">
-            Segment 5
-        </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
+<ion-header mode="md">
+    <ion-navbar>
+        <ion-title>Infinite Swiped Tabs</ion-title>
+    </ion-navbar>
+    <ion-toolbar mode="md" color="light">
+        <ion-segment #segments mode="md" [(ngModel)]="page" color="light">
+            <ion-segment-button value="0" (click)="selectedTab(0)">
+                Segment 1
+            </ion-segment-button>
+            <ion-segment-button value="1" (click)="selectedTab(1)">
+                Segment 2
+            </ion-segment-button>
+            <ion-segment-button value="2" (click)="selectedTab(2)">
+                Segment 3
+            </ion-segment-button>
+            <ion-segment-button value="3" (click)="selectedTab(3)">
+                Segment 4
+            </ion-segment-button>
+            <ion-segment-button value="4" (click)="selectedTab(4)">
+                Segment 5
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
 </ion-header>
 <ion-content padding>
     <ion-slides #slider (ionSlideDidChange)="slideChanged()">
         <ion-slide>
             <h1>Tab 1</h1>
+            <ion-list>
+                <ion-item *ngFor="let dummy of ' '.repeat(20).split(''), let i = index">
+                    {{i}}
+                </ion-item>
+            </ion-list>
         </ion-slide>
         <ion-slide>
             <h1>Tab 2</h1>

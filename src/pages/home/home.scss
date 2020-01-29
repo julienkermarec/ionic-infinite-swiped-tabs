@@ -1,21 +1,21 @@
 page-home {
   ion-segment {
-      display: block;
-      white-space: nowrap;
-      font-size: 0;
-      overflow: auto;
+    display: block;
+    white-space: nowrap;
+    font-size: 0;
+    overflow: auto;
 
-      &::-webkit-scrollbar {
-          width: 0;
-          height: 0;
-          display: none;
-      }
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none;
+    }
 
-      ion-segment-button.segment-button {
-          display: inline-block;
-          min-width: 90px;
-          width: auto;
-      }
+    ion-segment-button.segment-button {
+      display: inline-block;
+      min-width: 90px;
+      width: auto;
+    }
   }
   ion-toolbar {
     padding: 0px 4px !important;
@@ -24,5 +24,9 @@ page-home {
 
   .toolbar-ios ion-title {
     padding: 0 0px 1px;
+  }
+  ion-slide .slide-zoom {
+    height: 100%;
+    overflow-y: scroll;
   }
 }
